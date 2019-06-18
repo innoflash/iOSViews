@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="3dp"
+    android:paddingLeft="3dp"
+    android:paddingTop="3dp"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/item_icon"
+        android:layout_width="@dimen/thumb_width"
+        android:layout_height="@dimen/thumb_width"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:padding="3dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/square" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/thumb_width"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginBottom="3dp"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/item_heading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/margin30"
+                android:layout_marginRight="@dimen/margin30"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="@string/header"
+                android:textSize="@dimen/item_small_text_size" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/item_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/margin30"
+                    android:layout_marginRight="@dimen/margin30"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/mid_section"
+                    android:textSize="@dimen/toolbar_text_height"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/item_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" "
+                    android:layout_toLeftOf="@+id/arrow_right"
+                    android:background="@drawable/badge_green_background"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/arrow_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:src="@drawable/ic_chevron_right_black_18dp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/item_footer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="75dp"
+                android:layout_marginRight="75dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="@string/footer"
+                android:textColor="#C7C4C4"
+                android:textSize="@dimen/item_small_text_size" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:background="@color/ios_toolbar_line"
+            android:paddingTop="45dp" />
+    </LinearLayout>
+
+</LinearLayout>

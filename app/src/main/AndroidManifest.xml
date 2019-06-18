@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChipTags"></activity>
+        <activity android:name=".LIV3"></activity>
+        <activity android:name=".LIV1" />
+        <activity android:name=".Spinners" />
+        <activity android:name=".Inputs" />
+        <activity android:name=".ChipTags" />
         <activity android:name=".Toolbars" />
         <activity
             android:name=".MainActivity"

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/block.all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ios_background"
+    android:orientation="vertical"
+    tools:context=".Spinners">
+
+    <TextView
+        style="@style/block_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Default Spinner" />
+
+    <net.innoflash.iosview.SpinnerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/spinner_items"
+        app:spinner_heading="@string/app_name"
+        app:spinner_selection="2" />
+
+    <TextView
+        style="@style/block_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wrapped in Card View" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <net.innoflash.iosview.SpinnerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:spinner_icon="@drawable/ic_visibility_blue_24dp"
+            app:spinner_heading="@string/app_name"
+            app:spinner_heading_color="@color/ios_red"
+            android:entries="@array/spinner_items" />
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -6,4 +6,13 @@
     <string name="with_background">With Background</string>
     <string name="with_icon">With Options</string>
     <string name="chips">Chip Tags</string>
+    <string name="input">Input Field</string>
+    <string name="spinners">Spinners</string>
+    <string-array name="spinner_items">
+        <item>One</item>
+        <item>Two</item>
+        <item>Three</item>
+        <item>Four</item>
+        <item>Five</item>
+    </string-array>
 </resources>

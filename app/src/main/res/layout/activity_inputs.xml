@@ -7,55 +7,46 @@
     android:layout_height="match_parent"
     android:background="@color/ios_background"
     android:orientation="vertical"
-    tools:context=".ChipTags">
+    tools:context=".Inputs">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <LinearLayout
-            style="@style/block.all"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                style="@style/block_title"
+            <net.innoflash.iosview.InputField
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Chip View" />
+                app:input_heading="Default input"
+                app:input_hint="hint" />
 
-            <net.innoflash.iosview.ChipView
+            <net.innoflash.iosview.InputField
                 android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/dimen3"
                 android:layout_height="wrap_content"
-                app:ios_chip_text="@string/loading" />
+                android:inputType="number"
+                app:input_heading="Number input"
+                app:input_hint="hint" />
 
-            <net.innoflash.iosview.ChipView
+            <net.innoflash.iosview.InputField
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:ios_chip_text="@string/app_name" />
+                android:inputType="textPassword"
+                app:input_heading="Password input"
+                app:input_hint="hint"
+                app:input_icon="@drawable/ic_visibility_blue_24dp" />
 
-            <TextView
-                style="@style/block_title"
+            <net.innoflash.iosview.InputField
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ChipLineView" />
-
-            <net.innoflash.iosview.ChipLineView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:ios_chipline_icon="@drawable/ic_visibility_blue_24dp"
-                app:ios_chipline_key="Key"
-                app:ios_chipline_value="Value" />
-
-            <net.innoflash.iosview.ChipLineView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:ios_chipline_icon="@drawable/ic_visibility_blue_24dp"
-                app:ios_chipline_key="@string/loading"
-                app:ios_chipline_value="Value" />
+                app:input_enabled="false"
+                app:input_heading="Password input"
+                app:input_heading_color="@color/ios_red"
+                app:input_hint="hint"
+                app:input_icon="@drawable/ic_visibility_blue_24dp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
 </LinearLayout>
