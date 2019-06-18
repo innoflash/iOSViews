@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ios_background"
+    android:orientation="vertical"
+    tools:context=".Toolbars">
+
+    <TextView
+        style="@style/block_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/default_toolbar" />
+
+    <net.innoflash.iosview.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:toolbar_title="@string/app_name" />
+
+    <TextView
+        style="@style/block_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/with_background" />
+
+    <net.innoflash.iosview.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:toolbar_background="@color/ios_orange"
+        app:toolbar_back_color="@color/white"
+        app:toolbar_title_color="@color/white"
+        app:toolbar_has_options="false"
+        app:toolbar_title="@string/app_name" />
+
+    <TextView
+        style="@style/block_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/with_icon" />
+
+    <net.innoflash.iosview.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:toolbar_has_options="true"
+        app:toolbar_icon="@drawable/ic_visibility_blue_24dp"
+        app:toolbar_title="@string/app_name" />
+
+</LinearLayout>

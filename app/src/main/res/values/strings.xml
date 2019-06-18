@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">IOSViews</string>
+    <string name="action_settings">Settings</string>
+    <string name="toolbars">Toolbars</string>
+    <string name="default_toolbar">Default Toolbar</string>
+    <string name="with_background">With Background</string>
+    <string name="with_icon">With Options</string>
+    <string name="chips">Chip Tags</string>
+</resources>

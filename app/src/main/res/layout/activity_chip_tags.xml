@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/block.all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ios_background"
+    android:orientation="vertical"
+    tools:context=".ChipTags">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            style="@style/block.all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/block_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chip View" />
+
+            <net.innoflash.iosview.ChipView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ios_chip_text="@string/app_name" />
+
+            <TextView
+                style="@style/block_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ChipLineView" />
+
+            <net.innoflash.iosview.ChipLineView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ios_chipline_icon="@drawable/ic_visibility_blue_24dp"
+                app:ios_chipline_key="Key"
+                app:ios_chipline_value="Value" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

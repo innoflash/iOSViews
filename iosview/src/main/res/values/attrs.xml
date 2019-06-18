@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Toolbar">
+        <attr name="toolbar_title" format="string" />
+        <attr name="toolbar_icon" format="reference" />
+        <attr name="toolbar_has_options" format="boolean" />
+        <attr name="toolbar_no_back_button" format="boolean" />
+        <attr name="toolbar_background" format="color" />
+        <attr name="toolbar_title_color" format="color" />
+        <attr name="toolbar_back_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="ChipView">
+        <attr name="ios_chip_icon" format="reference"/>
+        <attr name="ios_chip_text" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="ChipLineView">
+        <attr name="ios_chipline_key" format="string"/>
+        <attr name="ios_chipline_value" format="string"/>
+        <attr name="ios_chipline_icon" format="reference"/>
+    </declare-styleable>
+</resources>

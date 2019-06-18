@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="bottom_toolbar">
+        <item name="android:background">@color/toolbar_footer</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="card_footer_text">
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">@dimen/default_ios_text_size</item>
+    </style>
+
+    <style name="block_title">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/default_ios_text_size</item>
+        <item name="android:textColor">@color/block_title_color</item>
+        <item name="android:layout_marginTop">@dimen/margin25</item>
+        <item name="android:layout_marginBottom">@dimen/margin10</item>
+    </style>
+
+    <style name="block">
+        <item name="android:paddingLeft">@dimen/margin10</item>
+        <item name="android:paddingRight">@dimen/margin10</item>
+        <item name="android:paddingStart">@dimen/margin10</item>
+        <item name="android:paddingEnd">@dimen/margin10</item>
+    </style>
+
+    <style name="block.all">
+        <item name="android:padding">@dimen/margin10</item>
+    </style>
+    <style name="detail_cards">
+        <item name="android:paddingBottom">-2dp</item>
+        <item name="android:layout_marginBottom">@dimen/margin10</item>
+    </style>
+    <style name="padStart10">
+        <item name="android:paddingLeft">@dimen/margin10</item>
+    </style>
+    <style name="padStart0">
+        <item name="android:paddingLeft">0dp</item>
+    </style>
+    <style name="FullScreenDialogStyle" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowNoTitle">true</item>
+
+        <!-- Set this to true if you want Full Screen without status bar -->
+        <item name="android:windowFullscreen">true</item>
+
+        <item name="android:windowIsFloating">false</item>
+
+        <!-- This is important! Don't forget to set window background -->
+        <item name="android:windowBackground">@color/ios_background</item>
+
+        <!-- Additionally if you want animations when dialog opening -->
+        <item name="android:navigationBarColor">@color/ios_toolbar_color</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>

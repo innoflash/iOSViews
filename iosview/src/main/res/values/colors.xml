@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ios_light_blue">#5fc9f8</color>
+    <color name="ios_light_orange">#fecb2e</color>
+    <color name="ios_orange">#fd9426</color>
+    <color name="ios_pink">#fc3158</color>
+    <color name="ios_blue">#147efb</color>
+    <color name="ios_green">#53d769</color>
+    <color name="ios_red">#fc3d39</color>
+    <color name="ios_gray">#8e8e93</color>
+    <color name="black">#3E3E41</color>
+    <color name="ios_toolbar_color">#F7F5F5</color>
+    <color name="ios_background">#EBE8E8</color>
+    <color name="ios_toolbar_line">#CFCECE</color>
+    <color name="nice_green">#4CAF50</color>
+    <color name="white">#FFFFFF</color>
+    <color name="block_title_color">#747171</color>
+    <color name="separator_color">#A3A0A0</color>
+    <color name="toolbar_footer">#f7f7f8</color>
+</resources>

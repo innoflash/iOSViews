@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">iosview</string>
+    <string name="back">Back</string>
+    <string name="loading">Loading...</string>
+    <string name="header">header</string>
+    <string name="view">view</string>
+    <string name="footer">footer</string>
+    <string name="mid_section">mid section</string>
+    <string name="close">Close</string>
+    <string name="headerx">FNB Stadium, Soccer City Ave, Nasrec, Johannesburg, South Africa</string>
+    <string-array name="spinner_inputs">
+    </string-array>
+</resources>
