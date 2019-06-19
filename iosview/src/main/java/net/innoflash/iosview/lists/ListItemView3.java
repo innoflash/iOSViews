@@ -79,6 +79,8 @@ public class ListItemView3 extends LinearLayout {
     }
 
     public ImageView getImageView() {
+        if (circularImage)
+            return getCircleImageView();
         return imageView;
     }
 

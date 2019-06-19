@@ -12,8 +12,11 @@ import android.widget.TextView;
 import net.innoflash.iosview.Constants;
 import net.innoflash.iosview.R;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class ListItemView2 extends RelativeLayout {
     private ImageView imageView;
+    private CircleImageView circleImageView;
     private TextView headerTextView;
     private TextView contentTextView;
     private View line;
@@ -59,9 +62,12 @@ public class ListItemView2 extends RelativeLayout {
         contentTextView = findViewById(R.id.item_content);
         line = findViewById(R.id.line);
         imageView = findViewById(R.id.item_icon);
+        circleImageView = findViewById(R.id.circular_image);
     }
 
     public ImageView getImageView() {
+        if (circularImage)
+            return getCircleImageView();
         return imageView;
     }
 
@@ -154,5 +160,16 @@ public class ListItemView2 extends RelativeLayout {
 
     public void setCircularImage(boolean circularImage) {
         this.circularImage = circularImage;
+        if (circularImage) {
+            getCircleImageView().setVisibility(VISIBLE);
+            imageView.setVisibility(GONE);
+        } else {
+            getCircleImageView().setVisibility(GONE);
+            imageView.setVisibility(VISIBLE);
+        }
+    }
+
+    public CircleImageView getCircleImageView() {
+        return circleImageView;
     }
 }

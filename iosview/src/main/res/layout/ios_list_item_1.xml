@@ -13,7 +13,7 @@
         android:layout_marginRight="@dimen/margin10"
         android:adjustViewBounds="true"
         android:padding="@dimen/dimen3"
-        android:scaleType="fitCenter"
+        android:scaleType="centerCrop"
         android:src="@drawable/square" />
 
     <de.hdodenhof.circleimageview.CircleImageView
