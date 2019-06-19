@@ -4,27 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/ios_background"
-    style="@style/block.all"
+    android:orientation="vertical"
     tools:context=".LIV3">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <net.innoflash.iosview.lists.ListItemView3
+
+        <LinearLayout
             android:layout_width="match_parent"
-            app:item_heading="@string/loading"
-            app:item_heading_color="@color/ios_orange"
-            app:item_icon="@drawable/ic_android_blue_24dp"
-            app:item_content_color="@color/ios_red"
-            app:item_content="@string/loading"
-            app:item_footer="@string/loading"
-            app:item_type="orange"
-            app:item_has_type="true"
-            app:item_badge="--"
-            android:scaleType="centerInside"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <net.innoflash.iosview.lists.ListItemView3
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                app:item_badge="new"
+                app:item_content="@string/loading"
+                app:item_content_color="@color/ios_red"
+                app:item_footer="@string/loading"
+                app:item_has_type="true"
+                app:item_heading="@string/loading"
+                app:item_heading_color="@color/ios_orange"
+                app:item_icon="@drawable/smiling"
+                app:item_type="none" />
+
+            <net.innoflash.iosview.lists.ListItemView3
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                app:item_badge="new"
+                app:item_content="@string/loading"
+                app:item_content_color="@color/ios_red"
+                app:item_footer="@string/loading"
+                app:item_has_type="true"
+                app:item_circular_image="false"
+                app:item_heading="@string/loading"
+                app:item_heading_color="@color/ios_orange"
+                app:item_icon="@drawable/smiling"
+                app:item_type="green" />
+
+            <net.innoflash.iosview.lists.ListItemView3
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                app:item_badge="new"
+                app:item_content="@string/loading"
+                app:item_content_color="@color/ios_red"
+                app:item_footer="@string/loading"
+                app:item_has_type="true"
+                app:item_heading="@string/loading"
+                app:item_heading_color="@color/ios_orange"
+                app:item_icon="@drawable/smiling"
+                app:item_type="orange" />
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
 </LinearLayout>

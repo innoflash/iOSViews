@@ -54,6 +54,7 @@
         <attr name="liv2_content_text" format="string"/>
         <attr name="liv2_has_line" format="boolean"/>
         <attr name="liv2_has_image" format="boolean"/>
+        <attr name="liv2_circular_image" format="boolean"/>
         <attr name="liv2_header_color" format="color"/>
         <attr name="liv2_content_color" format="color"/>
     </declare-styleable>

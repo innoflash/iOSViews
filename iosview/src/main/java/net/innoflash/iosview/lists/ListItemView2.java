@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import net.innoflash.iosview.Constants;
 import net.innoflash.iosview.R;
 
 public class ListItemView2 extends RelativeLayout {
@@ -21,8 +22,10 @@ public class ListItemView2 extends RelativeLayout {
     private int image;
     private boolean hasLine;
     private boolean hasImage;
+    private boolean circularImage;
     private int headerColor;
     private int contentColor;
+    private int scaleType;
 
     public ListItemView2(Context context) {
         super(context);
@@ -32,12 +35,14 @@ public class ListItemView2 extends RelativeLayout {
     public ListItemView2(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
+        scaleType = attrs.getAttributeIntValue(Constants.ANDROID_NAMESPACE, "scaleType", 0);
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ListItemView2);
         readAttributes(typedArray);
         typedArray.recycle();
     }
 
     private void readAttributes(TypedArray typedArray) {
+        imageView.setScaleType(ImageView.ScaleType.values()[scaleType]);
         setImage(typedArray.getResourceId(R.styleable.ListItemView2_liv2_icon, R.drawable.ic_android_blue_24dp));
         setHeader(typedArray.getString(R.styleable.ListItemView2_liv2_head_text));
         setContent(typedArray.getString(R.styleable.ListItemView2_liv2_content_text));
@@ -45,6 +50,7 @@ public class ListItemView2 extends RelativeLayout {
         setHasImage(typedArray.getBoolean(R.styleable.ListItemView2_liv2_has_image, true));
         setHeaderColor(typedArray.getColor(R.styleable.ListItemView2_liv2_header_color, getResources().getColor(R.color.black)));
         setContentColor(typedArray.getColor(R.styleable.ListItemView2_liv2_content_color, getResources().getColor(R.color.black)));
+        setCircularImage(typedArray.getBoolean(R.styleable.ListItemView2_liv2_circular_image, false));
     }
 
     private void init() {
@@ -140,5 +146,13 @@ public class ListItemView2 extends RelativeLayout {
     public void setContentColor(int contentColor) {
         this.contentColor = contentColor;
         getContentTextView().setTextColor(contentColor);
+    }
+
+    public boolean isCircularImage() {
+        return circularImage;
+    }
+
+    public void setCircularImage(boolean circularImage) {
+        this.circularImage = circularImage;
     }
 }

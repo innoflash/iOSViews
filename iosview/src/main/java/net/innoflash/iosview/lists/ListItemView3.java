@@ -15,9 +15,12 @@ import androidx.annotation.RequiresApi;
 import net.innoflash.iosview.Constants;
 import net.innoflash.iosview.R;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class ListItemView3 extends LinearLayout {
 
     private ImageView imageView;
+    private CircleImageView circleImageView;
     private TextView headingTextView;
     private TextView contentTextView;
     private TextView footerTextView;
@@ -39,6 +42,7 @@ public class ListItemView3 extends LinearLayout {
         init();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     public ListItemView3(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init();
@@ -56,16 +60,18 @@ public class ListItemView3 extends LinearLayout {
         setItemContent(typedArray.getString(R.styleable.ListItemView3_item_content));
         setItemFooter(typedArray.getString(R.styleable.ListItemView3_item_footer));
         setHasType(typedArray.getBoolean(R.styleable.ListItemView3_item_has_type, false));
-        setItemType(ItemType.values()[typedArray.getInt(R.styleable.ListItemView3_item_type, 0)]);
         imageView.setScaleType(ImageView.ScaleType.values()[scaleType]);
         setHeaderColor(typedArray.getColor(R.styleable.ListItemView3_item_heading_color, getResources().getColor(R.color.black)));
         setContentColor(typedArray.getColor(R.styleable.ListItemView3_item_content_color, getResources().getColor(R.color.black)));
         setBadge(typedArray.getString(R.styleable.ListItemView3_item_badge));
+        setItemType(ItemType.values()[typedArray.getInt(R.styleable.ListItemView3_item_type, 0)]);
+        setCircularImage(typedArray.getBoolean(R.styleable.ListItemView3_item_circular_image, true));
     }
 
     private void init() {
         LayoutInflater.from(getContext()).inflate(R.layout.ios_list_item_3, this);
         imageView = findViewById(R.id.item_icon);
+        circleImageView = findViewById(R.id.circular_image);
         headingTextView = findViewById(R.id.item_heading);
         contentTextView = findViewById(R.id.item_content);
         footerTextView = findViewById(R.id.item_footer);
@@ -128,6 +134,10 @@ public class ListItemView3 extends LinearLayout {
         return contentColor;
     }
 
+    public CircleImageView getCircleImageView() {
+        return circleImageView;
+    }
+
     public boolean isHasType() {
         return hasType;
     }
@@ -143,7 +153,7 @@ public class ListItemView3 extends LinearLayout {
 
     public void setItemContent(String itemContent) {
         this.itemContent = itemContent;
-        getContentTextView().setText(itemContent);
+        getContentTextView().setText("| " + itemContent);
     }
 
     public void setItemFooter(String itemFooter) {
@@ -167,6 +177,7 @@ public class ListItemView3 extends LinearLayout {
             case NONE:
                 getBadgeTextView().setTextColor(getResources().getColor(R.color.black));
                 getBadgeTextView().setBackgroundColor(0);
+                getBadgeTextView().setText("view");
                 break;
             case BLUE:
                 getBadgeTextView().setTextColor(getResources().getColor(R.color.white));
@@ -182,7 +193,7 @@ public class ListItemView3 extends LinearLayout {
                 break;
             case RED:
                 getBadgeTextView().setTextColor(getResources().getColor(R.color.white));
-                getBadgeTextView().setBackground(getResources().getDrawable(R.drawable.badge_orange_background));
+                getBadgeTextView().setBackground(getResources().getDrawable(R.drawable.badge_red_background));
                 break;
         }
     }
@@ -194,6 +205,8 @@ public class ListItemView3 extends LinearLayout {
 
     public void setIcon(int icon) {
         this.icon = icon;
+        getCircleImageView().setImageResource(icon);
+        imageView.setImageResource(icon);
     }
 
     public void setHeaderColor(int headerColor) {
@@ -216,6 +229,13 @@ public class ListItemView3 extends LinearLayout {
 
     public void setCircularImage(boolean circularImage) {
         this.circularImage = circularImage;
+        if (circularImage) {
+            getCircleImageView().setVisibility(VISIBLE);
+            imageView.setVisibility(GONE);
+        } else {
+            getCircleImageView().setVisibility(GONE);
+            imageView.setVisibility(VISIBLE);
+        }
     }
 
     public enum ItemType {
