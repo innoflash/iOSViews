@@ -19,7 +19,7 @@ public class Toolbars extends AppCompatActivity {
 
         toolbar = findViewById(R.id.toolbar);
 
-        toolbar.setOptionsClicked(new Toolbar.OptionsClicked() {
+        toolbar.setOnOptionsClicked(new Toolbar.OptionsClicked() {
             @Override
             public void optionsClicked(View view) {
                 Toast.makeText(getApplicationContext(), "You clicked the options on the toolbar", Toast.LENGTH_SHORT).show();

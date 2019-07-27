@@ -3,7 +3,6 @@ package net.innoflash.iosview;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +18,7 @@ public class Toolbar extends RelativeLayout implements View.OnClickListener {
     private TextView toolbarTextView;
     private ImageButton optionsImageButton;
     private Activity activity;
-    private OptionsClicked optionsClicked;
+    private OptionsClicked onOptionsClicked;
     private String pageTitle;
     private int icon;
     private int toolbarBackgroundColor;
@@ -68,8 +67,8 @@ public class Toolbar extends RelativeLayout implements View.OnClickListener {
             activity = (Activity) getContext();
             activity.finish();
         } else {
-            if (optionsClicked != null)
-                optionsClicked.optionsClicked(this);
+            if (onOptionsClicked != null)
+                onOptionsClicked.optionsClicked(this);
         }
     }
 
@@ -89,8 +88,8 @@ public class Toolbar extends RelativeLayout implements View.OnClickListener {
         return activity;
     }
 
-    public OptionsClicked getOptionsClicked() {
-        return optionsClicked;
+    public OptionsClicked getOnOptionsClicked() {
+        return onOptionsClicked;
     }
 
     public String getPageTitle() {
@@ -109,8 +108,8 @@ public class Toolbar extends RelativeLayout implements View.OnClickListener {
         return noBackButton;
     }
 
-    public void setOptionsClicked(OptionsClicked optionsClicked) {
-        this.optionsClicked = optionsClicked;
+    public void setOnOptionsClicked(OptionsClicked onOptionsClicked) {
+        this.onOptionsClicked = onOptionsClicked;
     }
 
     public void setPageTitle(String pageTitle) {
