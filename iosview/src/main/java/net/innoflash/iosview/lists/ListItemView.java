@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import net.innoflash.iosview.Constants;
 import net.innoflash.iosview.R;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -27,6 +28,7 @@ public class ListItemView extends LinearLayout {
     private boolean hasLine;
     private boolean hasImage;
     private boolean circularImage;
+    private int scaleType;
 
     public ListItemView(Context context) {
         super(context);
@@ -36,12 +38,14 @@ public class ListItemView extends LinearLayout {
     public ListItemView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
+        scaleType = attrs.getAttributeIntValue(Constants.ANDROID_NAMESPACE, "scaleType", 0);
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ListItemView);
         readAttributes(typedArray);
         typedArray.recycle();
     }
 
     private void readAttributes(TypedArray typedArray) {
+        imageView.setScaleType(ImageView.ScaleType.values()[scaleType]);
         setText(typedArray.getString(R.styleable.ListItemView_liv_text));
         setImage(typedArray.getResourceId(R.styleable.ListItemView_liv_icon, R.drawable.square));
         setHasLine(typedArray.getBoolean(R.styleable.ListItemView_liv_has_line, true));
