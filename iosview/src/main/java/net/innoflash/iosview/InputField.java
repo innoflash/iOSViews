@@ -86,6 +86,9 @@ public class InputField extends RelativeLayout {
 
     public void setHeading(String heading) {
         this.heading = heading;
+        if (heading == null) {
+            getTextView().setVisibility(GONE);
+        }
         getTextView().setText(heading);
     }
 
