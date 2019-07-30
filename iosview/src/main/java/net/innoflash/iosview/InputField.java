@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import net.innoflash.iosview.extras.Constants;
+
 public class InputField extends RelativeLayout {
     private ImageView imageView;
     private TextView textView;

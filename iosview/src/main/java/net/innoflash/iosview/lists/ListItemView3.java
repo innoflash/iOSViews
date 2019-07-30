@@ -12,7 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
-import net.innoflash.iosview.Constants;
+import net.innoflash.iosview.extras.Constants;
 import net.innoflash.iosview.R;
 
 import de.hdodenhof.circleimageview.CircleImageView;
