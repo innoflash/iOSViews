@@ -10,7 +10,7 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import net.innoflash.iosview.extras.Constants;
+import net.innoflash.iosview.utils.Constants;
 
 public class SpinnerView extends RelativeLayout {
     private ImageView imageView;

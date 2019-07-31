@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import net.innoflash.iosview.extras.Constants;
+import net.innoflash.iosview.utils.Constants;
 import net.innoflash.iosview.R;
 
 import de.hdodenhof.circleimageview.CircleImageView;

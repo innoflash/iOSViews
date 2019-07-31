@@ -1,11 +1,11 @@
-package net.innoflash.iosview.extras;
+package net.innoflash.iosview.utils;
 
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.widget.EditText;
 
-public class Functions {
+public class FlashUtils {
     public static void openLink(Context context, String url) {
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));
