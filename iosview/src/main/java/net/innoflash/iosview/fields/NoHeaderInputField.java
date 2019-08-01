@@ -45,6 +45,7 @@ public class NoHeaderInputField extends LinearLayout {
         setHint(typedArray.getString(R.styleable.NoHeaderInputField_field_hint));
         setValue(typedArray.getString(R.styleable.NoHeaderInputField_field_value));
         setIcon(typedArray.getResourceId(R.styleable.NoHeaderInputField_field_icon, R.drawable.ic_android_blue_24dp));
+        setActivated(typedArray.getBoolean(R.styleable.NoHeaderInputField_field_activated, true));
     }
 
     private void init() {

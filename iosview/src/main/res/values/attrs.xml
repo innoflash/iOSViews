@@ -80,6 +80,6 @@
         <attr name="field_icon" format="reference" />
         <attr name="field_hint" format="string" />
         <attr name="field_value" format="string" />
-        <attr name="field_deactivated" format="boolean" />
+        <attr name="field_activated" format="boolean" />
     </declare-styleable>
 </resources>
