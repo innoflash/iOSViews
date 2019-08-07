@@ -67,7 +67,7 @@ public class NoHeaderInputField extends LinearLayout {
     }
 
     public String getValue() {
-        return value;
+        return getEditText().getText().toString();
     }
 
     public int getIcon() {
