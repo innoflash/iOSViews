@@ -59,6 +59,18 @@
                     app:liv_has_image="true"
                     app:liv_text_color="@color/ios_red"
                     app:liv_text="@string/app_name" />
+
+                <net.innoflash.iosview.lists.ListItemView
+                    android:id="@+id/reviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    app:liv_circular_image="true"
+                    app:liv_has_image="true"
+                    app:liv_icon_padding="6sp"
+                    app:liv_has_line="false"
+                    app:liv_icon="@drawable/smiling"
+                    app:liv_text="@string/app_name" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

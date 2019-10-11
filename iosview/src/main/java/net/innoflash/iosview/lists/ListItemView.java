@@ -165,9 +165,9 @@ public class ListItemView extends LinearLayout {
         this.circularImage = circularImage;
         if (circularImage) {
             getCircleImageView().setVisibility(VISIBLE);
-            getImageView().setVisibility(GONE);
+            imageView.setVisibility(GONE);
         } else {
-            getImageView().setVisibility(VISIBLE);
+            imageView.setVisibility(VISIBLE);
             getCircleImageView().setVisibility(GONE);
         }
     }
