@@ -34,6 +34,7 @@ public class ListItemView3 extends LinearLayout {
     private int icon;
     private int headerColor;
     private int contentColor;
+    private int imagePadding;
     private boolean hasType;
     private boolean circularImage;
 
@@ -66,6 +67,7 @@ public class ListItemView3 extends LinearLayout {
         setBadge(typedArray.getString(R.styleable.ListItemView3_item_badge));
         setItemType(ItemType.values()[typedArray.getInt(R.styleable.ListItemView3_item_type, 0)]);
         setCircularImage(typedArray.getBoolean(R.styleable.ListItemView3_item_circular_image, true));
+        setImagePadding(typedArray.getDimensionPixelSize(R.styleable.ListItemView3_item_icon_padding, 0));
     }
 
     private void init() {
@@ -151,6 +153,16 @@ public class ListItemView3 extends LinearLayout {
     public void setItemHeading(String itemHeading) {
         this.itemHeading = itemHeading;
         getHeadingTextView().setText(itemHeading);
+    }
+
+    public int getImagePadding() {
+        return imagePadding;
+    }
+
+    public void setImagePadding(int imagePadding) {
+        this.imagePadding = imagePadding;
+        circleImageView.setPadding(imagePadding, imagePadding, imagePadding, imagePadding);
+        imageView.setPadding(imagePadding, imagePadding, imagePadding, imagePadding);
     }
 
     public void setItemContent(String itemContent) {

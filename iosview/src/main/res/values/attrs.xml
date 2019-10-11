@@ -51,6 +51,7 @@
     </declare-styleable>
     <declare-styleable name="ListItemView2">
         <attr name="liv2_icon" format="reference" />
+        <attr name="liv2_icon_padding" format="reference" />
         <attr name="liv2_head_text" format="string" />
         <attr name="liv2_content_text" format="string" />
         <attr name="liv2_has_line" format="boolean" />
@@ -65,6 +66,7 @@
         <attr name="item_footer" format="string" />
         <attr name="item_badge" format="string" />
         <attr name="item_icon" format="reference" />
+        <attr name="item_icon_padding" format="reference" />
         <attr name="item_has_type" format="boolean" />
         <attr name="item_circular_image" format="boolean" />
         <attr name="item_heading_color" format="color" />

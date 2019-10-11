@@ -29,6 +29,7 @@ public class ListItemView2 extends RelativeLayout {
     private int headerColor;
     private int contentColor;
     private int scaleType;
+    private int imagePadding;
 
     public ListItemView2(Context context) {
         super(context);
@@ -54,6 +55,7 @@ public class ListItemView2 extends RelativeLayout {
         setHeaderColor(typedArray.getColor(R.styleable.ListItemView2_liv2_header_color, getResources().getColor(R.color.black)));
         setContentColor(typedArray.getColor(R.styleable.ListItemView2_liv2_content_color, getResources().getColor(R.color.black)));
         setCircularImage(typedArray.getBoolean(R.styleable.ListItemView2_liv2_circular_image, false));
+        setImagePadding(typedArray.getDimensionPixelSize(R.styleable.ListItemView2_liv2_icon_padding, 0));
     }
 
     private void init() {
@@ -106,6 +108,16 @@ public class ListItemView2 extends RelativeLayout {
     public void setHeader(String header) {
         this.header = header;
         getHeaderTextView().setText(header);
+    }
+
+    public int getImagePadding() {
+        return imagePadding;
+    }
+
+    public void setImagePadding(int imagePadding) {
+        this.imagePadding = imagePadding;
+        getCircleImageView().setPadding(imagePadding, imagePadding, imagePadding, imagePadding);
+        imageView.setPadding(imagePadding, imagePadding, imagePadding, imagePadding);
     }
 
     public void setContent(String content) {
