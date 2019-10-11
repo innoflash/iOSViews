@@ -46,6 +46,7 @@
                 android:layout_height="wrap_content"
                 app:liv_has_image="true"
                 app:liv_text_color="@color/ios_red"
+                app:liv_icon_padding="@dimen/chip_text_size"
                 app:liv_text="@string/app_name" />
         </androidx.cardview.widget.CardView>
 

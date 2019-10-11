@@ -25,6 +25,7 @@ public class ListItemView extends LinearLayout {
     private int image;
     private int closeIcon;
     private int textColor;
+    private int iconPadding;
     private boolean hasLine;
     private boolean hasImage;
     private boolean circularImage;
@@ -53,6 +54,7 @@ public class ListItemView extends LinearLayout {
         setCircularImage(typedArray.getBoolean(R.styleable.ListItemView_liv_circular_image, true));
         setTextColor(typedArray.getColor(R.styleable.ListItemView_liv_text_color, getResources().getColor(R.color.black)));
         setHasImage(typedArray.getBoolean(R.styleable.ListItemView_liv_has_image, true));
+        setIconPadding(typedArray.getDimensionPixelSize(R.styleable.ListItemView_liv_icon_padding, 0));
     }
 
     private void init() {
@@ -62,6 +64,15 @@ public class ListItemView extends LinearLayout {
         textView = findViewById(R.id.item_text);
         line = findViewById(R.id.line);
         closeIconView = findViewById(R.id.close_button);
+    }
+
+    public int getIconPadding() {
+        return iconPadding;
+    }
+
+    public void setIconPadding(int iconPadding) {
+        this.iconPadding = iconPadding;
+        getCircleImageView().setPadding(iconPadding, iconPadding, iconPadding, iconPadding);
     }
 
     public ImageView getImageView() {

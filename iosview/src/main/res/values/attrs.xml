@@ -41,6 +41,7 @@
     </declare-styleable>
     <declare-styleable name="ListItemView">
         <attr name="liv_icon" format="reference" />
+        <attr name="liv_icon_padding" format="reference" />
         <attr name="liv_text" format="string" />
         <attr name="liv_arrow" format="reference" />
         <attr name="liv_has_line" format="boolean" />
