@@ -73,6 +73,7 @@ public class ListItemView extends LinearLayout {
     public void setIconPadding(int iconPadding) {
         this.iconPadding = iconPadding;
         getCircleImageView().setPadding(iconPadding, iconPadding, iconPadding, iconPadding);
+        imageView.setPadding(iconPadding, iconPadding, iconPadding, iconPadding);
     }
 
     public ImageView getImageView() {
