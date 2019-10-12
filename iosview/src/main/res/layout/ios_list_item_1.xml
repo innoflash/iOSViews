@@ -49,15 +49,14 @@
             android:layout_marginRight="@dimen/dimen3"
             android:paddingLeft="@dimen/margin12"
             android:src="@drawable/ic_chevron_right_black_18dp" />
-
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/ios_toolbar_line" />
     </RelativeLayout>
 
-    <View
-        android:id="@+id/line"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/image_view"
-        android:background="@color/ios_toolbar_line" />
+
 
 </LinearLayout>
