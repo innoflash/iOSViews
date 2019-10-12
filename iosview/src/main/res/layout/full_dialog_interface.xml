@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/ios_background"
+                android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/ios_dialog_view"
+            android:layout_above="@+id/toolbar"
+            android:layout_height="match_parent">
+
+    </LinearLayout>
+
+    <RelativeLayout
+            android:id="@+id/toolbar"
+            style="@style/bottom_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:layout_alignParentBottom="true">
+
+        <TextView
+                android:id="@+id/ios_dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/loading"
+                android:textSize="@dimen/toolbar_text_height"/>
+
+        <TextView
+                android:id="@+id/ios_dialog_close"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="@string/close"
+                android:textColor="@color/ios_blue"
+                android:textFontWeight="500"
+                android:textSize="@dimen/toolbar_text_height"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
